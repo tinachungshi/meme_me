@@ -1,0 +1,18 @@
+<h1>this is the memes edit form</h1>
+
+<%= form_for @meme do |meme| %>
+  <%= meme.label :title %>
+  <%= meme.text_field :title %> <br><br>
+
+  <%= meme.label :category %>
+  <%= meme.text_field :category %> <br><br>
+
+  <%= meme.label :category %>
+  <%= meme.collection_select :category, Category.all, :name, :email %> <br><br>
+<!-- How to take out email from dropdown -->
+
+  <%= meme.label :image %>
+  <%= meme.text_field :image %> <br><br>
+
+  <%= meme.submit "Submit" %>
+<% end %>

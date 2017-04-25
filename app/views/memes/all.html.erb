@@ -1,0 +1,8 @@
+<h1>this is going to all everything</h1>
+
+<% @memes.each do |meme| %>
+  <%= meme.title %> <br>
+  <%= meme.category %> <br>
+  <%= image_tag(meme.image) %>
+
+<% end %>

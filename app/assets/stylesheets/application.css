@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: white;
+  padding: 5px 3px;
+
+}
+
+.postform {
+  width: 50%;
+  border: black 1px solid;
+  margin: 0 auto;
+}

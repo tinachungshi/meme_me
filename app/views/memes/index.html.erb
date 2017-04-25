@@ -1,16 +1,18 @@
 <h1>This is the front page</h1>
 
-
-<p>Search bar:</p>
-
 <p>Categories:</p>
 
 <ul>
-<li><a href="#">FCK Yeah!</a></li>
-<li><a href="#">I'm awesome</a></li>
-<li><a href="#">FCK No</a></li>
-<li><a href="#">Leave me alone</a></li>
+<li><a href="/memes/random">Meme Me a day</a></li>
+<br>
+<% @categories.each do |cat| %>
+  <li><%= link_to cat.name, filtered_path(cat.name) %></li>
+<% end %>
+<br>
+<li><a href="/memes/all">Show me everything</a></li>
 </ul>
 
 <p>Want to share your wisdom?</p>
-<p><a href="#">Post today!</a></p>
+<p><a href="/memes/new">Post today!</a></p>
+
+
