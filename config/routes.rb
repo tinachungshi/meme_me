@@ -10,8 +10,6 @@ get '/memes/filtered/:cat', to: 'memes#filtered', as: :filtered
 get '/memes/random', to: 'memes#random'
 resources :memes
 
-get '/categories/:id', to: 'categories#show', as: :show_categories
-
 get '/login', to: 'sessions#new'
 get '/logout', to: 'sessions#destroy'
 

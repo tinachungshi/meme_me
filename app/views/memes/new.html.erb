@@ -2,33 +2,39 @@
 
 
 <div class="row postform">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s12">
-        <%= form_for @meme do |meme| %>
-          <%= meme.label :title %><br>
-          <%= meme.text_field :title %>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <%= meme.label :image_url %><br>
-          <%= meme.text_field :image %>
+  <div class="col s12">
+      <%= form_for @meme do |meme| %>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= meme.label :title %><br>
+            <%= meme.text_field :title %>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <%= meme.label :category %><br>
-          <%= meme.collection_select(:category, Category.all, :name, :name) %>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= meme.label :image %><br>
+            <%= meme.text_field :image %>
+          </div>
         </div>
-      </div>
-      <div class="input-field col s12">
-          <%= meme.submit "Submit" %>
-        <% end %>
-      </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= meme.label :category %><br>
+            <%= meme.collection_select(:category, Category.all, :name, :name) %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= meme.submit "Submit" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  </form>
+  </div>
 </div>
 
+<script>
+  $('select').material_select();
+</script>
 
 
 

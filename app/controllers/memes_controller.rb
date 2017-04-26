@@ -1,24 +1,14 @@
 class MemesController < ApplicationController
   before_action :set_meme, only: [:show, :edit, :update, :destroy]
-  # Prevent anonymous users from
-  # performing CUD on memes
   before_action :authorize, except: [:index, :show]
 
   def index
     @categories = Category.all
   end
 
-  def all
-    @memes = Meme.all
-  end
-
-  def filtered
-    @memes = Meme.where(category: params[:cat])
-  end
-
-  def show
-    @memes = Meme.all
-  end
+  # def show
+  #   @meme = Meme.find(params[:id])
+  # end
 
   def new
     @meme = Meme.new
@@ -27,8 +17,8 @@ class MemesController < ApplicationController
 
   def create
     @meme = Meme.new(meme_params)
-    @meme.user = current_user
     if @meme.save
+      @meme.user = current_user
       redirect_to root_path
     else
       render :new
@@ -48,13 +38,24 @@ class MemesController < ApplicationController
     end
   end
 
+  def all
+    @memes = Meme.all
+  end
+
+  def filtered
+    @memes = Meme.where(category: params[:cat])
+  end
+
   def random
+    @memes = Meme.all
+    @number = @memes.length
+    @random_no = rand(@number) + 1
+    @show_image = Meme.find(@random_no)
   end
 
 
 private
 
-  # Implement Strong Params
   def meme_params
     params.require(:meme).permit(:title, :category, :image)
   end

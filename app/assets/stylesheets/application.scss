@@ -14,10 +14,13 @@
  *= require_self
  */
 
+@import "materialize";
+
+/*For all*/
+
 body {
   background-color: white;
-  padding: 5px 3px;
-
+  padding: 3px 3px;
 }
 
 .postform {
@@ -25,3 +28,37 @@ body {
   border: black 1px solid;
   margin: 0 auto;
 }
+
+.memes {
+  width: 50%;
+  height: 50%;
+  background-color: pink;
+  border: black 1px solid;
+}
+
+.myimg {
+  width: 200px;
+  height: auto;
+}
+
+/*Index page*/
+
+.index_container {
+  border: black 1px solid;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+a {
+  color: gray;
+}
+
+.random_container {
+  border: black 1px solid;
+  height: 33px;
+  padding: 2px;
+  margin: 2px;
+}
+
+
