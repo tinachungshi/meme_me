@@ -1,12 +1,12 @@
-
 <h3>MEME Wonderland</h3>
 
-<div class="container">
+<div class="row">
   <% @memes.each do |meme| %>
-    <%= meme.title %> <br><br>
-    <%= meme.category %> <br><br>
-  <div class="image">
+  <div class="col s4 random">
+    <%= meme.title %><br>
+    <%= meme.category %>
     <%= image_tag(meme.image) %>
   </div>
   <% end %>
+  </div>
 </div>

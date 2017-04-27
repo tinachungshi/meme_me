@@ -1,0 +1,21 @@
+<h4>profile</h4>
+
+<div class="row">
+  <div class="col s12">
+    <%= link_to "Edit Profile", edit_user_path(@user) %>
+    <p class="textdisplay">name:</p> <%= @user.name %>
+    <p class="textdisplay">email:</p> <%= @user.email %>
+  </div>
+</div>
+
+<div class="row">
+  <% @memes.each do |meme| %>
+  <div class="col s4 random">
+    <%= meme.title %><br>
+    <%= meme.category %>
+    <%= image_tag(meme.image) %>
+  </div>
+  <% end %>
+  </div>
+</div>
+

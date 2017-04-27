@@ -1,7 +1,16 @@
 class UsersController < ApplicationController
 
+  def show
+    @memes = Meme.where(user_id: current_user)
+    @user = current_user
+    if @user == nil
+      redirect_to '/login'
+    else
+      render :show
+    end
+  end
+
   def new
-  # Provide the model instance to the form_for helper
     @user = User.new
   end
 
@@ -16,15 +25,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+    if @user.update_attributes(user_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
 private
 
-    # Implement Strong Params
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
-
-
-
-
 
 end

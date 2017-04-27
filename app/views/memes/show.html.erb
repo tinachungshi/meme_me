@@ -1,3 +1,10 @@
 <h1>This is show</h1>
 
-<%= @meme %>
+<div class="row">
+  <div class="col s12 random">
+    <%= @meme.title %><br>
+    <%= @meme.category %>
+    <%= image_tag(@meme.image) %>
+  </div>
+  </div>
+

@@ -11,8 +11,8 @@ categoriesSeed = [
   {name: "FCK Yeah!"},
   {name: "I'm too sexy for my shirt"},
   {name: "Btch don't kill my vibe"},
-  {name: "Uhm. No, no, no, no."},
-  {name: "Leave me alone."},
+  {name: "No no no no"},
+  {name: "Leave me alone"},
   {name: "Troll master"}
 ]
 

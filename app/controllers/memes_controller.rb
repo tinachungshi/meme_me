@@ -1,14 +1,13 @@
 class MemesController < ApplicationController
-  before_action :set_meme, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:index, :show]
 
   def index
     @categories = Category.all
   end
 
-  # def show
-  #   @meme = Meme.find(params[:id])
-  # end
+  def show
+    @meme = Meme.find(params[:id])
+  end
 
   def new
     @meme = Meme.new
@@ -17,9 +16,9 @@ class MemesController < ApplicationController
 
   def create
     @meme = Meme.new(meme_params)
+    @meme.user = current_user
     if @meme.save
-      @meme.user = current_user
-      redirect_to root_path
+      redirect_to meme_path(@meme)
     else
       render :new
     end
@@ -38,6 +37,12 @@ class MemesController < ApplicationController
     end
   end
 
+  def destroy
+    @meme = Meme.find(params[:id])
+    @meme.destroy
+    redirect_to root_path
+  end
+
   def all
     @memes = Meme.all
   end
@@ -48,16 +53,14 @@ class MemesController < ApplicationController
 
   def random
     @memes = Meme.all
-    @number = @memes.length
-    @random_no = rand(@number) + 1
-    @show_image = Meme.find(@random_no)
+    @show_image = @memes.sample
   end
 
 
 private
 
   def meme_params
-    params.require(:meme).permit(:title, :category, :image)
+    params.require(:meme).permit(:title, :category, :image, :user_id)
   end
 
 

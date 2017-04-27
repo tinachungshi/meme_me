@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
 
   <body>
@@ -19,7 +20,8 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if current_user %>
             <li><%= current_user.name %></li>
-            <li><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+            <li><%= link_to 'Profile', profile_path %></li>
+            <li><%= link_to 'Log Out', '/logout', method: :delete %></li>
           <% end %>
           <% if !current_user %>
             <li><%= link_to 'Log In', login_path %></li>
@@ -30,7 +32,7 @@
         <ul class="side-nav" id="mobile-demo">
         <% if current_user %>
           <li><%= current_user.name %></li>
-          <li><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+          <li><%= link_to 'Log Out', '/logout', method: :delete %></li>
         <% end %>
         <% if !current_user %>
           <li><%= link_to 'Log In', login_path %></li>
@@ -53,5 +55,10 @@
 
 
 
+  <script>
+    $(".button-collapse").sideNav();
+  </script>
   </body>
+
+
 </html>

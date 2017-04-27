@@ -1,2 +1,12 @@
-<h1>THIS IS MEMES FILTERED by <%= params[:cat] %></h1>
+<h1><%= params[:cat] %></h1>
+
+<div class="row">
+  <% @memes.each do |meme| %>
+  <div class="col s4 random">
+    <%= image_tag(meme.image) %><br>
+    <%= meme.title %><br>
+    <%= meme.category %>
+  </div>
+  <% end %>
+</div>
 

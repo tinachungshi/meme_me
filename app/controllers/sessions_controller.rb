@@ -5,12 +5,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    #When user submits the log in form
-    #Not using an instance variable since we're not providing the user to a view
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path, notice: "Loged in!"
+      redirect_to root_path, notice: "Logged in!"
     else
       flash.now.alert = "Invalid login credentials - try again!"
       render :new

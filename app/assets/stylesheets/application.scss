@@ -18,6 +18,20 @@
 
 /*For all*/
 
+* {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.title_text {
+  font-weight: 600;
+}
+
+a {
+  color: gray;
+}
+
 body {
   background-color: white;
   padding: 3px 3px;
@@ -29,16 +43,14 @@ body {
   margin: 0 auto;
 }
 
-.memes {
-  width: 50%;
-  height: 50%;
-  background-color: pink;
-  border: black 1px solid;
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.myimg {
-  width: 200px;
-  height: auto;
+.textdisplay {
+  color: teal;
+
 }
 
 /*Index page*/
@@ -50,9 +62,6 @@ body {
   font-size: 20px;
 }
 
-a {
-  color: gray;
-}
 
 .random_container {
   border: black 1px solid;
@@ -61,4 +70,11 @@ a {
   margin: 2px;
 }
 
+/* Random */
 
+.random {
+  height: 350px;
+  border: 1px solid black;
+  margin: 2px 0;
+
+}
