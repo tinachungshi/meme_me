@@ -6,5 +6,7 @@
     <%= @meme.category %>
     <%= image_tag(@meme.image) %>
   </div>
+  <%= link_to "delete", meme_path, method: :delete, data: { confirm: "Really?" } if current_user %>
+
 </div>
 
