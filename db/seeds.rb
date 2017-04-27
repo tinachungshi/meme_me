@@ -8,12 +8,12 @@
 
 
 categoriesSeed = [
-  {name: "FCK Yeah!"},
-  {name: "I'm too sexy for my shirt"},
-  {name: "Btch don't kill my vibe"},
-  {name: "No no no no"},
-  {name: "Leave me alone"},
-  {name: "Troll master"}
+  {name: "fck yeah"},
+  {name: "too sexy for my shirt"},
+  {name: "don't kill my vibe"},
+  {name: "nopenopenopenopenope"},
+  {name: "forever alone"},
+  {name: "handsome sloth"}
 ]
 
 Category.destroy_all
