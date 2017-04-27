@@ -1,18 +1,46 @@
-<h1>this is the memes edit form</h1>
+<h4>edit your memes</h4>
 
-<%= form_for @meme do |meme| %>
-  <%= meme.label :title %>
-  <%= meme.text_field :title %> <br><br>
 
-  <%= meme.label :category %>
-  <%= meme.text_field :category %> <br><br>
+<div class="row postform">
+  <div class="col s12">
+    <%= form_for @meme do |meme| %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= meme.label :title %><br>
+          <%= meme.text_field :title, required: true %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= meme.label :image_url %><br>
+          <%= meme.text_field :image, required: true %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= meme.label :category %><br>
+          <%= meme.collection_select(:category, Category.all, :name, :name) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= meme.submit "Submit" %>
+        </div>
+      </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= link_to "delete", meme_path(meme), method: :destroy, data: { confirm: "Really?" } if current_user %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-  <%= meme.label :category %>
-  <%= meme.collection_select :category, Category.all, :name, :email %> <br><br>
-<!-- How to take out email from dropdown -->
 
-  <%= meme.label :image %>
-  <%= meme.text_field :image %> <br><br>
+<script>
+  $('select').material_select();
+</script>
 
-  <%= meme.submit "Submit" %>
-<% end %>
+
+
+

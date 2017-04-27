@@ -31,7 +31,7 @@ class MemesController < ApplicationController
   def update
     @meme = Meme.find(params[:id])
     if @meme.update_attributes(meme_params)
-      redirect_to memes_path
+      redirect_to meme_path
     else
       render :edit
     end

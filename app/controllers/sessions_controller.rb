@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def new
-    #Nothing to do but render new.html.erb
   end
 
   def create

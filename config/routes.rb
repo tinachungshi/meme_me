@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 root 'memes#index'
 
 get '/profile', to: 'users#show'
+get '/register', to: 'users#new'
 resources :users, only: [:new, :show, :create, :edit, :update]
 
 get '/memes/all', to: 'memes#all'
