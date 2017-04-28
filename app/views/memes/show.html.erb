@@ -1,12 +1,9 @@
-<h4>This is show</h4>
-
-<div class="row">
-  <div class="col s12">
-    <%= @meme.title %><br>
-    <%= @meme.category %>
-    <%= image_tag(@meme.image) %>
-  </div>
-  <%= link_to "delete", meme_path, method: :delete, data: { confirm: "Really?" } if current_user %>
-
+<h4 class="title_text"><%= @meme.category %> - <%= @meme.title %></h4>
+<div class="divider"></div>
+<br>
+<div class="col s6">
+  <%= image_tag(@meme.image) %>
 </div>
+<%= link_to "edit", edit_meme_path, class:"waves-effect waves-light btn" if current_user %>
+<%= link_to "delete", meme_path, method: :delete, class:"waves-effect waves-light btn", data: { confirm: "Really?" } if current_user %>
 

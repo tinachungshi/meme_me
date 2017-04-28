@@ -18,6 +18,14 @@
 
 /*For all*/
 
+.card-image{
+  height: 200px;
+}
+
+.card-image > img {
+  height: 100%;
+}
+
 * {
   font-size: 16px;
   font-weight: 300;
@@ -29,7 +37,7 @@
 }
 
 a {
-  color: white;
+  color: red;
   font-weight: 400;
 }
 
@@ -45,11 +53,6 @@ body {
 
 img {
   max-width: 100%;
-  // border: 1px black solid;
-}
-
-.textdisplay {
-  color: teal;
 }
 
 /*Index page*/
@@ -74,4 +77,16 @@ img {
 
 .random {
   max-height: 350px;
+}
+
+.category_text{
+  margin:0;
+  font-weight: 500;
+  color: teal;
+}
+
+.memetitle_text{
+  margin:0;
+  font-weight: 400;
+
 }

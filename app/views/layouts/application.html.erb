@@ -21,20 +21,23 @@
           <% if current_user %>
             <li><%= current_user.name %></li>
             <li><a href="/">Home</a></li>
+            <li><a href="/memes/new">Post</a></li>
             <li><%= link_to 'Profile', profile_path %></li>
-            <li><%= link_to 'Log Out', '/logout', method: :delete %></li>
+            <li><%= link_to 'Log Out', '/logout' %></li>
           <% end %>
           <% if !current_user %>
             <li><a href="/">Home</a></li>
+            <li><a href="/memes/new">Post</a></li>
             <li><%= link_to 'Log In', login_path %></li>
             <li><%= link_to 'Sign Up', register_path %></li>
           <% end %>
         </ul>
         <ul class="side-nav" id="mobile-demo">
         <li><a href="/">Home</a></li>
+        <li><a href="/memes/new">Post</a></li>
         <% if current_user %>
           <li><%= link_to 'Profile', profile_path %></li>
-          <li><%= link_to 'Log Out', '/logout', method: :delete %></li>
+          <li><%= link_to 'Log Out', '/logout' %></li>
         <% end %>
         <% if !current_user %>
           <li><%= link_to 'Log In', login_path %></li>
