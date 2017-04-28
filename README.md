@@ -22,7 +22,7 @@ Say bonjour to MEME Me, an exclusive site just for your favorite memes.  Swing b
 
 ## Getting Started 
 MEME it to me [NOW](https://meme-meme.herokuapp.com/).  
-Take a peek into my [PAST] (https://trello.com/b/0wiW43v1/project-2-meme-me).  
+Take a peek into my [PAST](https://trello.com/b/0wiW43v1/project-2-meme-me).  
 
 ## Giving Thanks
 Credits to Google images, Heroku, Jim & Jon, Jerry & AJ over at GA.
