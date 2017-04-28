@@ -1,24 +1,30 @@
-# README
+# MEME Me
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+Sick of looking through pages and pages of uncategorized memes? 
+Need to troll someone really quickly but don't know where to start?
 
-Things you may want to cover:
+Well, don't fret baby boo-- I got the perfect site for you!
 
-* Ruby version
+Say bonjour to MEME Me, an exclusive site just for your favorite memes.  Swing by, open an account, and post all your memes!   Our categories make it super easy for you to pick and find your next ultimate meme.  Better yet, invite all your friends for a super-duper crazy meme extravaganza.
 
-* System dependencies
+![index screen](http://i.imgur.com/uBrmTOW.png "index screen")
 
-* Configuration
+![all screen](http://i.imgur.com/HfLmaSA.png "all screen")
+   
+## Technologies Used
 
-* Database creation
+1. My new favorite, Ruby on Rails 
+2. My scarlet lovers, HTML5/CSS3
+3. Materialize FTW
+4. Google fonts and images
+5. Illustrator for Ms. Googly Eyes
 
-* Database initialization
+## Getting Started 
+MEME it to me [NOW](https://meme-meme.herokuapp.com/)  
 
-* How to run the test suite
+## Giving Thanks
+Credits to Google images, Heroku, Jim & Jon, Jerry & AJ over at GA.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created by Tina Chung (Looking for mentors, email me).    
+[Github](https://github.com/tinachungshi)  

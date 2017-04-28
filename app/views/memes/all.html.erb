@@ -12,6 +12,9 @@
         <div class="card-action">
           <p class="category_text"><%= meme.category %></p>
           <p class="memetitle_text"><%= meme.title %></p>
+          <%= link_to "show", meme_path(meme) if meme.user_id == current_user.id %>
+          <%= link_to "Edit", edit_meme_path(meme), method: :get if meme.user_id == current_user.id %>
+          <%= link_to "delete", meme_path(meme), method: :delete, data: { confirm: "Really?" } if meme.user_id == current_user.id %>
         </div>
       </div>
     </div>
