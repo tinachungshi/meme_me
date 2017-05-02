@@ -8,7 +8,7 @@
 
 
 categoriesSeed = [
-  {name: "fck yeah"},
+  {name: "heck yeah!"},
   {name: "too sexy for my shirt"},
   {name: "don't kill my vibe"},
   {name: "nopenopenopenopenope"},
